@@ -1,4 +1,4 @@
-import '@azlabs-wc/layouts/azl-hbox.js';
+import '@azlabs-wc/layouts/azl-box.js';
 import { LitElement, html, nothing } from 'lit';
 import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';

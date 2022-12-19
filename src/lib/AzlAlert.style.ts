@@ -32,24 +32,23 @@ export const componentStyle = css`
 
   .alert.warning.light {
     background: var(--alert-warning-light-bg-color, #fff4c7);
-    color: var(--alert-warning-light-font-color, #333333);
     border-color: var(--alert-warning-light-border-color, #ad7600);
   }
   .alert.default.light {
     background: var(--alert-default-light-bg-color, #e3f5fc);
-    color: var(--alert-default-light-font-color, #666666);
     border-color: var(--alert-default-light-border-color, #00567a);
   }
   .alert.danger.light {
     background: var(--alert-danger-light-bg-color, #feddd7);
-    color: var(--alert-danger-light-font-color, #666666);
     border-color: var(--alert-danger-light-border-color, #991700);
   }
 
   .alert.success.light {
     background: var(--alert-success-light-bg-color, #dff0d0);
-    color: var(--alert-success-light-font-color, #666666);
     border-color: var(--alert-success-light-border-color, #306b00);
+  }
+  .alert.light ::slotted(*) {
+    color: var(--alert-light-text-color, #666666) !important;
   }
 
   .alert.success.light svg > path,
@@ -70,25 +69,25 @@ export const componentStyle = css`
 
   .alert.warning {
     background: var(--alert-warning-bg-color, hsl(26deg, 100%, 38%));
-    color: var(--alert-warning-font-color, #fff);
     border-color: var(--alert-warning-border-color, hsl(26deg, 100%, 38%));
   }
 
   .alert.default {
     background: var(--alert-default-bg-color, hsl(198deg, 100%, 32%));
-    color: var(--alert-default-font-color, #fff);
     border-color: var(--alert-default-border-color, hsl(198deg, 100%, 32%));
   }
 
   .alert.danger {
-    background: var(--alert-danger-bg-color, #ff5353);
-    color: var(--alert-danger-font-color, #fff);
-    border-color: var(--alert-danger-border-color, #ff5353);
+    background: var(--alert-danger-bg-color,  hsl(9deg, 100%, 38%));
+    border-color: var(--alert-danger-border-color,  hsl(9deg, 100%, 38%));
   }
+  
   .alert.success {
     background: var(--alert-success-bg-color, #00b35d);
-    color: var(--alert-success-font-color, #fff);
     border-color: var(--alert-success-border-color, #00b35d);
+  }
+  .alert ::slotted(*) {
+    color: var(--alert-text-font-color, #fff) !important;
   }
 
   .alert svg {

@@ -1,29 +1,121 @@
 <!doctype html>
 <html lang="en-GB">
+
 <head>
   <meta charset="utf-8">
   <style>
+    *,
+    body,
+    :host {
+      font-size: calc(10px + 2vmin);
+      color: #1a2b42;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
     body {
       background: #fafafa;
     }
+
+    .page-title {
+      text-align: center;
+      font-size: 3rem;
+      line-height: 1.2rem;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .output-section {
+      display: flex;
+      align-items: center;
+      align-content: center;
+    }
+
+    .preview {
+      margin-left: 480px;
+      width: 480px;
+    }
+
+    span.alert-text {
+      display: block;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
-  <div id="demo"></div>
+  <div class="page-title">Azl Alert</div>
+  <div class="output-section">
+    <div class="preview">
+      <div id="demo"></div>
+    </div>
+  </div>
 
   <script type="module">
     import { html, render } from 'lit';
-    import '../dist/src/azl-alert.js';
+    import '../dist/azl-alert.js';
+    import '../dist/zoom-in-out-alert.js';
 
-    const title = 'Hello owc World!';
     render(
       html`
-        <azl-alert .title=${title}>
-          some light-dom
+      <zoom-in-out-alert status="danger" closable>
+          <span class="alert-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </span>
+        </zoom-in-out-alert>
+        <br />
+        <azl-alert light status="default" closable>
+          <span class="alert-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </span>
+        </azl-alert>
+        <br />
+        <azl-alert light status="success">
+          <span class="alert-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </span>
+        </azl-alert>
+        <br />
+        <azl-alert light status="warning">
+          <span class="alert-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </span>
+        </azl-alert>
+        <br />
+        <azl-alert light status="danger" closable>
+          <span class="alert-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </span>
+        </azl-alert>
+
+        <br />
+        <!-- -->
+        <azl-alert status="default">
+          <span class="alert-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </span>
+        </azl-alert>
+        <br />
+        <azl-alert status="success">
+          <span class="alert-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </span>
+        </azl-alert>
+        <br />
+        <azl-alert status="warning">
+          <span class="alert-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </span>
+        </azl-alert>
+        <br />
+        <azl-alert status="danger" closable>
+          <span class="alert-text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </span>
         </azl-alert>
       `,
       document.querySelector('#demo')
     );
   </script>
 </body>
+
 </html>
