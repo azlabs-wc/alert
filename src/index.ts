@@ -7,7 +7,7 @@ declare global {
   }
 
   interface HTMLElementTagNameMap {
-    'zoom-in-out-alert': AzlZoomInAlert;
+    'azl-zoom-in-out-alert': AzlZoomInAlert;
   }
 }
 

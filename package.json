@@ -14,7 +14,9 @@
   "exports": {
     ".": "./index.js",
     "./azl-alert": "./azl-alert.js",
-    "./azl-alert.js": "./azl-alert.js"
+    "./azl-alert.js": "./azl-alert.js",
+    "./zoom-in-out-alert": "./zoom-in-out-alert.js",
+    "./zoom-in-out-alert.js": "./zoom-in-out-alert.js"
   },
   "files": [
     "*"
