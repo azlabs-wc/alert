@@ -78,10 +78,10 @@ export const componentStyle = css`
   }
 
   .alert.danger {
-    background: var(--alert-danger-bg-color,  hsl(9deg, 100%, 38%));
-    border-color: var(--alert-danger-border-color,  hsl(9deg, 100%, 38%));
+    background: var(--alert-danger-bg-color, hsl(9deg, 100%, 38%));
+    border-color: var(--alert-danger-border-color, hsl(9deg, 100%, 38%));
   }
-  
+
   .alert.success {
     background: var(--alert-success-bg-color, #00b35d);
     border-color: var(--alert-success-border-color, #00b35d);
